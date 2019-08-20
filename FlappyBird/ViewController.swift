@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // SKViewに方を変換する
+        // SKViewに型を変換する
         let skView = self.view as! SKView
         
         //FPSを表示する
@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         
         //ビューにシーンを表示する
         skView.presentScene(scene)
+    }
+    //ステータスバーを消す
+    override var prefersStatusBarHidden: Bool{
+        get {
+            return true
+        }
     }
 
 
